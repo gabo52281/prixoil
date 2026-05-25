@@ -15,7 +15,7 @@ function Features() {
   ];
 
   return (
-    <section className="features">
+    <section className="features" id="benefits">
       {items.map((item, index) => (
         <div className="feature-card" key={index}>
           <h3>{item.title}</h3>

@@ -1,10 +1,11 @@
-import oil from "../assets/oil.png";
+//import oil from "../assets/oil.png";//
+import oil2 from "../assets/oil2.png";
 
 function Product() {
   return (
-    <section className="product-section">
+    <section className="product-section" id="product">
       <div className="product-image">
-        <img src={oil} alt="Producto" />
+        <img src={oil2} alt="Producto" />
       </div>
 
       <div className="product-info">

@@ -95,29 +95,64 @@ section {
 }
 
 .features {
+  min-height: 100vh;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  background: #0c0c0c;
+  gap: 30px;
+
+  align-items: center;
+
+  background:
+    radial-gradient(circle at center, rgba(255,0,0,0.08), transparent),
+    #0c0c0c;
 }
 
 .feature-card {
-  background: #121212;
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid #1f1f1f;
+  background: linear-gradient(
+    180deg,
+    rgba(25,25,25,0.95),
+    rgba(10,10,10,0.95)
+  );
+
+  padding: 60px 40px;
+
+  min-height: 420px;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition: 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(255, 0, 0, 0.3);
+
+  box-shadow: 0 20px 40px rgba(255,0,0,0.15);
 }
 
 .feature-card h3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+
   color: #ff4040;
+
+  font-size: 2rem;
 }
 
 .feature-card p {
   color: #b8b8b8;
-  line-height: 1.6;
-}
 
+  line-height: 1.8;
+
+  font-size: 1.1rem;
+}
 .product-section {
   display: flex;
   align-items: center;
@@ -238,4 +273,86 @@ section {
   .secondary-btn {
     width: 100%;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: #ff2a2a;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #d1d1d1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff4040;
+}
+
+.header-btn {
+  background: #ff2a2a;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero {
+  padding-top: 140px;
+}
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .header {
+    padding: 20px;
+  }
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }

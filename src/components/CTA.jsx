@@ -1,6 +1,6 @@
 function CTA() {
   return (
-    <section className="cta">
+    <section className="cta" id="contact">
       <h2>Lleva el rendimiento de tu moto al siguiente nivel</h2>
 
       <p>
